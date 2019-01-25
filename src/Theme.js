@@ -1,14 +1,18 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { blue } from '@material-ui/core/colors';
+import { blue, yellow } from '@material-ui/core/colors';
 
 export default createMuiTheme({
     palette: {
-        primary: blue
+        primary: blue,
+        secondary: yellow
+    },
+    spacing: {
+        unit: 5
     },
     typography: {
         useNextVariants: true,
-        headings :{
+        headings: {
             fontSize: 15,
         }
     },
-});
+})

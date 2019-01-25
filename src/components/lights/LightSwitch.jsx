@@ -31,6 +31,7 @@ const LightSwitch = ({ id, on, onClick, classes }) => {
                             />
                         }
                         label={label}
+                        labelPlacement='bottom'
                     />
                 </CardActions>
             </CardContent>

@@ -1,6 +1,6 @@
 {
   "temperatures": {
-    "temperature": "69"
+    "temperature": "16"
   },
   "lights": [
     {
@@ -8,15 +8,15 @@
       "id": 1
     },
     {
-      "on": true,
+      "on": false,
       "id": 2
     },
     {
-      "on": true,
+      "on": false,
       "id": 3
     },
     {
-      "on": true,
+      "on": false,
       "id": 4
     },
     {
@@ -32,12 +32,12 @@
       "id": 7
     },
     {
-      "on": true,
+      "on": false,
       "id": 8
     },
     {
-      "id": 9,
-      "on": false
+      "on": false,
+      "id": 9
     }
   ]
 }

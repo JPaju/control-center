@@ -35,9 +35,8 @@ class LightsApp extends React.Component {
     }
 
     render = () => {
-
-
         const { classes } = this.props
+        
         return (
             <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
@@ -53,7 +52,7 @@ class LightsApp extends React.Component {
                 </ExpansionPanelDetails>
                 <Divider />
                 <ExpansionPanelActions className={classes.panelActions}>
-                    <Button onClick={this.updateState}>
+                    <Button onClick={this.updateState} variant='contained' color='primary'>
                         Update All
                         </Button>
                 </ExpansionPanelActions>

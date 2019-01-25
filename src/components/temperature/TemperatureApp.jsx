@@ -14,23 +14,26 @@ class TemperatureApp extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            temperature: ''
+            temperature: '',
+            newTemp: '',
         }
     }
 
     componentDidMount = () => { this.updateState() }
 
     updateState = async () => {
-        const temperature = await getTemp()
-        this.setState({ ...temperature })
+        const { temperature: temp } = await getTemp()
+        this.setState({ temperature: temp, newTemp: temp })
     }
 
-    setTemp = (event) => {
+    onNewTempChange = (event) => {
+        this.setState({newTemp: event.target.value })
+    }
+
+    onSetTemp = async (event) => {
         event.preventDefault()
-        const temp = event.target.temperature
-        console.log('Received temperature:', temp)
-        
-        event.target.temperature = ''
+        const { temperature } = await setTemp(this.state.newTemp)
+        this.setState({ temperature })
     }
     
     render = () => {
@@ -45,12 +48,13 @@ class TemperatureApp extends React.Component {
             <ExpansionPanelDetails className={classes.panel}>
                 <Temperature
                     { ...this.state }
-                    onSet={this.setTemp}
+                    onSet={this.onSetTemp}
+                    onChange={this.onNewTempChange}
                 />
             </ExpansionPanelDetails>
             <Divider />
             <ExpansionPanelActions className={classes.panel}>
-                <Button onClick={this.updateState}>
+                <Button onClick={this.updateState} variant='contained' color='primary'>
                     Update
                 </Button>
             </ExpansionPanelActions>
