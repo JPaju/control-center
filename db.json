@@ -1,36 +1,39 @@
 {
+  "temperatures": {
+    "temperature": "69"
+  },
   "lights": [
     {
-      "id": 1,
-      "on": true
+      "on": false,
+      "id": 1
     },
     {
-      "id": 2,
-      "on": false
+      "on": true,
+      "id": 2
     },
     {
-      "id": 3,
-      "on": false
+      "on": true,
+      "id": 3
     },
     {
-      "id": 4,
-      "on": false
+      "on": true,
+      "id": 4
     },
     {
-      "id": 5,
-      "on": false
+      "on": false,
+      "id": 5
     },
     {
       "id": 6,
       "on": false
     },
     {
-      "id": 7,
-      "on": false
+      "on": false,
+      "id": 7
     },
     {
-      "id": 8,
-      "on": false
+      "on": true,
+      "id": 8
     },
     {
       "id": 9,

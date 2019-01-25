@@ -1,5 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import LightsApp from './components/LightsApp'
+import App from './components/App'
 
-ReactDOM.render(<LightsApp />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
